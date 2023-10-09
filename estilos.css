@@ -1,0 +1,378 @@
+/* OBLIGATORIO 1 - CAROLINA VAZQUEZ - 175216
+Documento CSS de la pelicula La Sirenita */
+
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Fira+Sans:wght@200&family=Roboto:ital@1&family=Vidaloka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Vidaloka&display=swap');
+
+/* font-family: 'Vidaloka', serif;   USO PARA TITULOS
+font-family: 'Roboto', sans-serif;   USO PARA EL TEXTO */
+
+/* MI PALETA DE COLORES
+    color: #0A4D68;
+    color: #088395;
+    color: #05BFDB;
+    color: #00FFCA;
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: linear-gradient(#d3f9ff, #088395);
+    font-family: 'Roboto', sans-serif; 
+}
+
+/*menu*/
+/*contenido centrado entre 1200 y 1440px de ancho.*/
+.contenedor{
+    width: 1200px;
+    margin:0 auto;
+}
+
+header{
+    display: flex;
+    height: 80px;
+    padding: 20px;
+}
+
+header img{
+    height: 80px;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    float: right;
+    padding: 35px 20px 5px;
+}
+
+nav a{
+    color: #088395;
+    font-weight: bold;
+    transition: background-color .5s;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+a:hover {
+  color: #0A4D68;
+  text-shadow: #00FFCA 1px 0 10px;
+}
+
+/* PORTADA */
+
+.portada{
+    display: flex;
+    flex-direction: column;
+    background-image: url(img/titulo2.jpg);
+    background-size: cover;
+    background-position: right 50% bottom 65%;
+    height: 60vh;  
+}
+
+.portada #titulo{
+    font-size: 8vh;
+    padding: 10% 0 1% 0;  /* arriba derecha abajo izquierda */
+    color: #00ffcce0;
+    text-shadow: -1px 0 black;
+}
+
+.portada #titulo,h1{
+font-family: 'Vidaloka', serif;
+}
+
+.portada p:nth-child(2){    /* Estilos al subtitulo */
+    padding: 0 60% 5% 0;   /* arriba derecha abajo izquierda */
+    color: #9bd6ed;
+    text-shadow: -2px 0 black;
+}
+
+/* Estilos al boton que va al trailer */
+.portada span a{ 
+    font-size: 2.3vh;
+    padding: 2% 3%;
+    background-color: #00FFCA;
+    border: 1px solid whitesmoke;
+    border-radius: 20px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.portada span a:hover {
+    text-shadow: #1d353198 1px 0 10px;
+}
+
+
+/* SINOPSIS */
+
+h1{
+    text-align: center;
+    margin-top: 75px;
+    color: #0A4D68;
+    font-size: 7vh;
+}
+
+p{
+    font-size: 2.5vh;
+}
+
+.sinopsis p{
+    padding: 25px 0;  /* arriba/abajo izq/der */
+} 
+
+.imagenes{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    grid-gap: 6px;
+}
+
+.imagenes img{
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+}
+
+.imagenes img:nth-child(3){
+    grid-column: 3 / 4;
+    grid-row: 1 / 4;
+}
+
+.imagenes img:nth-child(5){
+    grid-column: 1 / 3;
+    grid-row: 2 / 4;
+}
+.imagenes img:nth-child(6){
+    grid-column: 4 / 5;
+    grid-row: 2 / 4;
+}
+
+/* CRITICAS */
+
+.criticas{
+    background-color: rgb(0, 255, 202, 0.3);
+    border-radius: 20%;
+    height: 500px;
+}
+
+.criticas article{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    float: left;
+}
+
+/* Estilo a las estrellas */
+.criticas article p:nth-child(1) {
+    color:#088395;
+    font-size: 4vh;
+}
+
+.criticas article p:nth-child(2){
+    font-style: italic;
+    padding: 30px 10px 10px 0;
+}
+
+
+/* REPARTO */
+
+#actores {
+    display: flex;
+    justify-content: space-around;
+}
+
+#actores p:nth-child(2){
+    padding:5px;
+}
+
+#actores p:nth-child(3){
+    font-style: italic;
+    padding: 0 0 20px;
+}
+
+.reparto h3{
+    padding: 0 0 40px;
+    text-align: center;
+}
+
+.reparto article{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    align-items: center;
+    background-color: rgb(0, 255, 202, 0.3);
+    border-radius: 20%;
+}
+
+
+.iconosActores{
+    flex-direction: row;
+    padding: 0 0 20px;
+}
+
+.iconosActores i{
+    padding:  0 5px 0;
+    font-size: 3vh;
+}
+
+.reparto img{
+    height: 120px;
+    width: 120px;
+    margin: 10px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid whitesmoke;
+}
+
+.reparto p{
+    text-align: center;
+}
+
+
+/* PREMIOS Y SUSCRIPCION */
+
+#premiosYsuscripcionTodo{
+    background-image: radial-gradient(#00FFCA 4px, transparent 4px), 
+    radial-gradient(#00FFCA 4px, transparent 4px);
+    background-position: 20px 20px, 20px 20px;
+    background-size: 90px 90px;
+}
+
+#premiosYsuscripcion{
+    display: flex;
+    gap: 60px;
+}
+
+.premios, .suscripcion{
+    flex-basis: 100%;
+    margin-bottom: 180px;
+}
+
+.suscripcion h1, .premios h1{
+    text-align: left;
+    padding: 70px 0;
+}
+
+/* PREMIOS */
+
+table{
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #05BFDB;
+    float:right;
+}
+
+tr:nth-child(1){
+    font-weight: bold;
+}
+
+td{
+    height: 81px;    
+}
+
+td:nth-child(3){
+    width: 40%;
+}
+
+.resultado{
+    border-radius: 150px;
+    background-color: #00ffcc50;
+}
+
+tr:nth-child(odd){  /*impar*/
+    background-color:#088395;
+}
+tr:nth-child(even){ /* par */
+    background-color: #05BFDB;
+}
+
+
+/* SUSCRIPCION */
+
+.suscripcion h2{
+    font-size: 2.5em;
+    padding-bottom: 15px;
+}
+
+.suscripcion p{
+    font-size: 1.2em;
+    padding-bottom: 30px;
+}
+
+label{
+    font-size: 2vh;
+    font-weight: bold;
+}
+
+form div:nth-child(1) {     /* Nombre y apellido y pais */
+    display: flex;
+    margin-bottom: 15px;
+    gap: 8px;
+}
+
+form div:nth-child(2) fieldset{     /* Email */
+    display:flex;
+    margin-bottom: 5px;
+    gap: 8px;
+}
+
+form div:nth-child(2) fieldset input{     /* Email input */
+    width:100%;
+}
+
+input{
+    height: 40px;
+}
+
+fieldset{
+    border-style: none;
+}
+
+#tiempoNovedades{
+    display: flex; 
+    gap:35px;  
+}
+
+/* Estilos a la cajas de nombre, email y submit*/
+input[type=submit]{
+    width: 100%;
+    height: 45px;
+    margin-top: 15px;
+}
+
+input[type=text]:focus,input[type=submit]:focus{
+    outline:yellow 2px solid;
+    outline-offset: -1px;
+}
+input[type=email]:focus{
+    outline:pink 2px solid;
+    outline-offset: -1px;
+}
+
+/* PIE */ 
+
+footer img{
+    height: 80px;
+}
+
+#pie{
+    display: flex;
+    align-items: center;
+}
+
+#pie p{
+    display: flex;
+    justify-content: center;
+    flex-basis: 70%;
+}
+
+#iconosPie{
+    font-size: 3vh;
+    display: flex;
+    gap:20px;
+}
